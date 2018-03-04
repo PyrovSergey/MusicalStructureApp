@@ -3,7 +3,6 @@ package com.test.musicalstructureapp;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -26,7 +25,6 @@ public class SongsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_songs);
         ButterKnife.bind(this);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         songListView = (ListView) findViewById(R.id.list);
         songAdapter = new SongAdapter(this, songs);
@@ -38,7 +36,6 @@ public class SongsActivity extends AppCompatActivity {
         songListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Song selectedSong = songAdapter.getItem(i);
                 View itemView = view;
                 ImageView imageViewPlay = (ImageView) itemView.findViewById(R.id.list_image_play);
                 ImageView imageViewPause = (ImageView) itemView.findViewById(R.id.list_image_pause);

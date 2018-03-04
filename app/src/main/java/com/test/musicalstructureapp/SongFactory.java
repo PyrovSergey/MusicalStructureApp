@@ -21,7 +21,7 @@ public final class SongFactory {
         songs = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 12; j++) {
-                songs.add(new Song(id, "Title № " + (j + 1), "Album № "+ (i + 1)));
+                songs.add(new Song(id, "Title № " + (j + 1), "Album № " + (i + 1)));
                 id++;
             }
         }

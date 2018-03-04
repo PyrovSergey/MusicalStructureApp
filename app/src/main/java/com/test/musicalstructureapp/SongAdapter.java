@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
-import java.util.UUID;
 
 import static com.test.musicalstructureapp.MainActivity.currentSong;
 import static com.test.musicalstructureapp.MainActivity.isPlayON;
