@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.test.musicalstructureapp.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/title_background" />
+
+    <TextView
+        android:id="@+id/text_name_of_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/button_repeat_off"
+        android:gravity="center_horizontal"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:typeface="serif"
+        tools:text="Name of album" />
+
+    <TextView
+        android:id="@+id/text_name_song"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_repeat_off"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="29dp"
+        android:gravity="center_horizontal"
+        android:textSize="18sp"
+        android:typeface="monospace"
+        tools:text="Title of the song" />
+
+    <ImageButton
+        android:id="@+id/button_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/ic_play_arrow_white_48dp"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/button_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_play"
+        android:layout_toStartOf="@+id/button_forward"
+        android:background="@drawable/ic_pause_white_48dp"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/button_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_play"
+        android:layout_marginStart="60dp"
+        android:layout_toEndOf="@+id/button_play"
+        android:background="@drawable/ic_fast_forward_white_48dp" />
+
+    <ImageButton
+        android:id="@+id/button_rewind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_play"
+        android:layout_marginEnd="60dp"
+        android:layout_toStartOf="@+id/button_play"
+        android:background="@drawable/ic_fast_rewind_white_48dp" />
+
+
+    <ImageButton
+        android:id="@+id/button_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_format_list_bulleted_white_36dp" />
+
+    <ImageButton
+        android:id="@+id/button_shuffle_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_forward"
+        android:layout_marginBottom="36dp"
+        android:layout_toEndOf="@+id/button_forward"
+        android:background="@drawable/ic_shuffle_white_24dp"
+        android:backgroundTint="@color/not_active_button_color" />
+
+    <ImageButton
+        android:id="@+id/button_shuffle_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_forward"
+        android:layout_marginBottom="36dp"
+        android:layout_toEndOf="@+id/button_forward"
+        android:background="@drawable/ic_shuffle_white_24dp"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/button_repeat_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_shuffle_on"
+        android:layout_toStartOf="@+id/button_rewind"
+        android:background="@drawable/ic_repeat_white_24dp"
+        android:backgroundTint="@color/not_active_button_color" />
+
+    <ImageButton
+        android:id="@+id/button_repeat_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_shuffle_on"
+        android:layout_toStartOf="@+id/button_rewind"
+        android:background="@drawable/ic_repeat_white_24dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>
